@@ -11,7 +11,7 @@ class Database{
 
     public function __construct()
     {
-        $dsn = 'mysql:host='. $this->host .';dbname='. $this->dbname;
+        $dsn = 'mysql:host='.$this->host .';dbname='. $this->dbname.';charset=utf8mb4';
 
         $option = array(
             PDO::ATTR_PERSISTENT => true,
