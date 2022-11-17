@@ -3,6 +3,7 @@
 require_once 'config.php';
 require_once('lib/Template.php');
 require_once('lib/Database.php');
+require_once('lib/Internship.php');
 
 // echo 'test';
 
