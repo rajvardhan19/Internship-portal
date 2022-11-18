@@ -62,4 +62,23 @@
             return $row;
         }
 
+        public function create($data){
+            $this->db->query("INSERT INTO internships (category_id, internship_title, department, description, location, credit, contact_user, contact_email) VALUES (:category_id, :internship_title, :department, :description, :location, :credit, :contact_user, :contact_email)");
+
+            $this->db->bind(':category_id', $data['category_id']);
+            $this->db->bind(':internship_title', $data['internship_title']);
+            $this->db->bind(':department', $data['department']);
+            $this->db->bind(':description', $data['description']);
+            $this->db->bind(':location', $data['location']);
+            $this->db->bind(':credit', $data['credit']);
+            $this->db->bind(':contact_user', $data['contact_user']);
+            $this->db->bind(':contact_email', $data['contact_email']);
+
+            if($this->db->execute()){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
     }
