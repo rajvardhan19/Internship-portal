@@ -3,11 +3,11 @@
         private $db;
         public function __construct(){
             $this->db = new Database;
-            echo "Testing";
+            // echo "Testing";
         }
 
         public function getALLInternships(){
-            echo "Start";
+            // echo "Start";
             $this->db->query("SELECT internships.*, categories.name AS cname 
                         FROM internships
                         INNER JOIN categories 
@@ -19,8 +19,8 @@
             return $results;
         }
 
-        public function testing(){
-            echo "Test2";
-        }
+        // public function testing(){
+        //     echo "Test2";
+        // }
 
     }
