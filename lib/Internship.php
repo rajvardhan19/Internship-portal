@@ -81,4 +81,15 @@
             }
         }
 
+        public function delete($id){
+            $this->db->query("DELETE FROM internships WHERE id = $id");
+
+            
+            if($this->db->execute()){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
     }
