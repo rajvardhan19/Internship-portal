@@ -12,10 +12,11 @@
     <a href="index.php">Go Back</a>
     <br><br>
     <div class="well">
-        <a href="edit.php?id=<?php $internship->id; ?>" class="btn btn-default">Edit</a>
+        <!-- <a href="edit.php?id=<?php $internship->id; ?>" class="btn btn-default">Edit</a> -->
         <form style="display:inline" method="POST" action="internship.php">
             <input type="hidden" name="del_id" value="<?php echo $internship->id;?>">
             <input type="submit" class="btn btn-danger" value="Delete">
+            <br><br>
         </form>
     </div>
 
